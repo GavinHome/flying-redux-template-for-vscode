@@ -6,9 +6,6 @@ import config from './config';
 import { PathLike } from 'mz/fs';
 const inflect = require('i')(true);
 
-export const initTemplates = async (context: vscode.ExtensionContext): Promise<void> => {
-  await copyFolder(path.join(context.extensionPath, 'templates'), path.join(config.templatesPath), '');
-};
 
 const copyFolder = async (src: string, dest: string, name: string):Promise<void> => {
   let stats = await fs.stat(dest).catch(e => undefined);
@@ -83,6 +80,10 @@ const getPathName = async (name: string, uri: Uri): Promise<string> => {
   return pathname;
 };
 
+export const initTemplates = async (context: vscode.ExtensionContext): Promise<void> => {
+  await copyFolder(path.join(context.extensionPath, 'templates'), path.join(config.templatesPath), '');
+};
+
 export const ifExists = async (name: string, uri: vscode.Uri):Promise<boolean> => {
 	var path = await getPathName(`${name}_component`, uri);
 	return await fs.exists(path);
@@ -93,7 +94,6 @@ export const generateComponent = async (name: string, uri: vscode.Uri): Promise<
   var srcPath = config.componentTemplatesPath;
   await copyFolder(srcPath, destPath, name);
 };
-
 
 export const generatePage = async (name: string, uri: vscode.Uri): Promise<void> => {
 	var destPath = await getPathName(`${name}_page`, uri);

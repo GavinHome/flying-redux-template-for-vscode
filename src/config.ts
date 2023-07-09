@@ -14,10 +14,6 @@ export class Config {
     public get componentTemplatesPath(): string {
         return path.join(this.templatesPath, `${path.sep}component`);
     }
-
-    // public get adapterTemplatesPath(): string {
-    //     return path.join(this.templatesPath, `${path.sep}adapter`);
-    // }
 } 
 
 export default new Config();

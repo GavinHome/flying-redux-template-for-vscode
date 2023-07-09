@@ -29,10 +29,6 @@ export async function activate(context: vscode.ExtensionContext) {
 		context.subscriptions.push(vscode.commands.registerCommand(command, callback, thisArg));
 	};
 
-	registerCommand("flying-redux-template.helloWorld", () => {
-		vscode.window.showInformationMessage('Hello World from flying-redux-template!');
-	});
-
 	registerCommand("flying-redux-template.page", async (uri: Uri) => {
 		if (!uri) {
 			return 'Please open workspace folder';
@@ -72,7 +68,6 @@ export async function activate(context: vscode.ExtensionContext) {
 			}).then(async (name: string | undefined) => {
 				if(name) {
 					await utils.generateComponent(name, uri);
-					// vscode.window.showInformationMessage(`${name},${uri}`);
 				}
 			});
 		} catch(error: any) {
@@ -80,7 +75,6 @@ export async function activate(context: vscode.ExtensionContext) {
 		}
 	});
 }
-
 
 
 // This method is called when your extension is deactivated

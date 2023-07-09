@@ -14,11 +14,6 @@
   "contributes": {
     "commands": [
       {
-        "command": "flying-redux-template.helloWorld",
-        "title": "Hello World",
-        "category": "Flying-Redux Template"
-      },
-      {
         "command": "flying-redux-template.page",
         "title": "Generate Page Template",
         "category": "Flying-Redux Template"
@@ -31,10 +26,6 @@
     ],
     "menus": {
       "explorer/context": [
-        {
-          "command": "flying-redux-template.helloWorld",
-          "group": "flying-redux-template"
-        },
         {
           "command": "flying-redux-template.page",
           "group": "flying-redux-template"
