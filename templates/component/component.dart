@@ -9,7 +9,7 @@ import 'state.dart';
 class $nameComponent extends Component<$nameState> {
   $nameComponent()
       : super(
-            effect: buildEffects(),
+            effect: buildEffect(),
             reducer: buildReducer(),
             view: ($nameState state, Dispatch dispatch, ComponentContext<$nameState> ctx) {
             return Container(

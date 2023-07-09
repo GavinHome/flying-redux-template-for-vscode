@@ -2,12 +2,12 @@ import 'package:flying_redux/flying_redux.dart';
 import 'package:flutter/material.dart';
 import 'state.dart';
 
-class SlotComponent extends Component<SlotState> {
-  SlotComponent()
+class ReportComponent extends Component<ReportState> {
+  ReportComponent()
       : super(
-          view: (SlotState state, Dispatch dispatch,
-              ComponentContext<SlotState> ctx) {
-                return Container(
+          view: (ReportState state, Dispatch dispatch,
+              ComponentContext<ReportState> ctx) {
+            return Container(
                 margin: const EdgeInsets.all(8.0),
                 padding: const EdgeInsets.all(8.0),
                 color: Colors.blue,
@@ -18,12 +18,12 @@ class SlotComponent extends Component<SlotState> {
                       child: const Icon(Icons.report),
                     ),
                     Text(
-                      'Total ${state.total} tasks.',
+                      'Total ${state.total} tasks, ${state.done} done.',
                       style:
                           const TextStyle(fontSize: 18.0, color: Colors.white),
                     )
                   ],
                 ));
-            }
+          },
         );
 }

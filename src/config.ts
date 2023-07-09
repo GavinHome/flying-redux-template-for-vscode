@@ -14,6 +14,10 @@ export class Config {
     public get componentTemplatesPath(): string {
         return path.join(this.templatesPath, `${path.sep}component`);
     }
+    
+    public get toDoListExampleTemplatesPath(): string {
+        return path.join(this.templatesPath, `${path.sep}todos`);
+    }
 } 
 
 export default new Config();

@@ -3,9 +3,8 @@ import 'package:flying_redux/flying_redux.dart';
 
 import 'action.dart';
 import 'state.dart';
-import './sub_component/state.dart';
 
-buildEffects() {
+buildEffect() {
   return combineEffects<$nameState>(<Object, Effect<$nameState>>{
     Lifecycle.initState: _onInit,
     $nameAction.onSomeAction: _onSomeAction,
@@ -14,11 +13,7 @@ buildEffects() {
 
 
 void _onInit(Action action, ComponentContext<$nameState> ctx) {
-  final List<SubState> initData = <SubState>[];
-  //do something
-  initData.add(SubState()..uniqueId="1");
-  initData.add(SubState()..uniqueId="2");
-  ctx.dispatch($nameActionCreator.initAction(initData));
+  ctx.dispatch($nameActionCreator.initAction([]));
 }
 
 void _onSomeAction(Action action, ComponentContext<$nameState> ctx) {

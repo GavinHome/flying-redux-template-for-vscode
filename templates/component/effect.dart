@@ -4,7 +4,7 @@ import 'package:flying_redux/flying_redux.dart';
 import 'action.dart';
 import 'state.dart';
 
-buildEffects() {
+buildEffect() {
   return combineEffects<$nameState>(<Object, Effect<$nameState>>{
     $nameAction.onSomeAction: _onSomeAction,
   });

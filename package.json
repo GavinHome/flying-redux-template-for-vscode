@@ -22,6 +22,11 @@
         "command": "flying-redux-template.component",
         "title": "Generate Component Template",
         "category": "Flying-Redux-Template"
+      },
+      {
+        "command": "flying-redux-template.example.todolist",
+        "title": "Generate ToDoList Example",
+        "category": "Flying-Redux-Template"
       }
     ],
     "menus": {
@@ -32,6 +37,10 @@
         },
         {
           "command": "flying-redux-template.component",
+          "group": "flying-redux-template"
+        },
+        {
+          "command": "flying-redux-template.example.todolist",
           "group": "flying-redux-template"
         }
       ]

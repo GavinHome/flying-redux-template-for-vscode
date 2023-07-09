@@ -74,6 +74,29 @@ export async function activate(context: vscode.ExtensionContext) {
 			vscode.window.showErrorMessage(`Flying-Redux-Template: ${error?.message}`);
 		}
 	});
+
+	registerCommand("flying-redux-template.example.todolist", async (uri: Uri) => {
+		if (!uri) {
+			return 'Please open workspace folder';
+		}
+
+		try {
+			vscode.window.showInputBox({
+				ignoreFocusOut:true,
+				placeHolder: "Please input name",
+				validateInput: async (name: string) => {
+					var exists = await utils.ifExists(name, uri);
+					return exists ? "Name Already Exists": null;
+				},
+			}).then(async (name: string | undefined) => {
+				if(name) {
+					await utils.generateToDoListExample(name, uri);
+				}
+			});
+		} catch(error: any) {
+			vscode.window.showErrorMessage(`Flying-Redux-Template: ${error?.message}`);
+		}
+	});
 }
 
 

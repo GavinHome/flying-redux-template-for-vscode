@@ -99,6 +99,10 @@ export const generatePage = async (name: string, uri: vscode.Uri): Promise<void>
 	var destPath = await getPathName(`${name}_page`, uri);
   var srcPath = config.pageTemplatesPath;
   await copyFolder(srcPath, destPath, name);
-  vscode.window.showInformationMessage(vscode.Uri.parse(destPath).fsPath);
-  await generateComponent('sub', vscode.Uri.parse(destPath));
+};
+
+export const generateToDoListExample = async (name: string, uri: vscode.Uri): Promise<void> => {
+	var destPath = await getPathName(`${name}`, uri);
+  var srcPath = config.toDoListExampleTemplatesPath;
+  await copyFolder(srcPath, destPath, name);
 };
