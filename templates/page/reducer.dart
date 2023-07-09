@@ -17,7 +17,6 @@ $nameState _initAction($nameState state, Action action) {
   return newState;
 }
 
-
 $nameState _someAction($nameState state, Action action) {
   final $nameState newState = state.clone();
   return newState;

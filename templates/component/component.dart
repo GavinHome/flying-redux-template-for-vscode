@@ -9,9 +9,10 @@ import 'state.dart';
 class $nameComponent extends Component<$nameState> {
   $nameComponent()
       : super(
-            effect: buildEffect(),
-            reducer: buildReducer(),
-            view: ($nameState state, Dispatch dispatch, ComponentContext<$nameState> ctx) {
+          effect: buildEffect(),
+          reducer: buildReducer(),
+          view: ($nameState state, Dispatch dispatch,
+              ComponentContext<$nameState> ctx) {
             return Container(
               padding: const EdgeInsets.all(8.0),
               child: GestureDetector(
@@ -47,6 +48,5 @@ class $nameComponent extends Component<$nameState> {
               ),
             );
           },
-      );
-
+        );
 }

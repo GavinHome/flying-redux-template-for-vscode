@@ -9,5 +9,5 @@ class $nameActionCreator {
 
   static Action someAction(dynamic state) {
     return Action($nameAction.someAction, payload: state);
-  } 
+  }
 }

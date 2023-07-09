@@ -11,7 +11,6 @@ buildEffect() {
   });
 }
 
-
 void _onInit(Action action, ComponentContext<$nameState> ctx) {
   ctx.dispatch($nameActionCreator.initAction([]));
 }

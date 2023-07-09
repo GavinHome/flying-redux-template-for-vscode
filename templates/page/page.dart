@@ -9,17 +9,13 @@ import 'state.dart';
 class $namePage extends Page<$nameState, Map<String, dynamic>> {
   $namePage()
       : super(
-            initState: initState,
-            effect: buildEffect(),
-            reducer: buildReducer(),
-            dependencies: Dependencies<$nameState>(
-              adapter: null,
-              slots: <String, Dependent<$nameState>>{
-              }
-            ),
-            middleware: <Middleware<$nameState>>[
-            ],
-            view: ($nameState state, Dispatch dispatch,
+          initState: initState,
+          effect: buildEffect(),
+          reducer: buildReducer(),
+          dependencies: Dependencies<$nameState>(
+              adapter: null, slots: <String, Dependent<$nameState>>{}),
+          middleware: <Middleware<$nameState>>[],
+          view: ($nameState state, Dispatch dispatch,
               ComponentContext<$nameState> ctx) {
             return Scaffold(
               body: Container(),
@@ -30,7 +26,5 @@ class $namePage extends Page<$nameState, Map<String, dynamic>> {
               ),
             );
           },
-            
-            );
-
+        );
 }
