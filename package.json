@@ -3,7 +3,8 @@
   "displayName": "flying-redux-template",
   "description": "Generate flying-redux Template",
   "publisher": "flying-redux",
-  "version": "0.0.1",  
+  "icon": "logo.png",
+  "version": "0.0.2",  
   "repository": {
     "type": "git",
     "url": "https://github.com/GavinHome/flying-redux-template-for-vscode.git"
