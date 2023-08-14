@@ -16,7 +16,7 @@ Also, templates can be replaced with your own templates
 
 Enjoy yourself~
 
-![flying-redux-template](flying-redux-template.jpg)
+![flying-redux-template](https://raw.githubusercontent.com/GavinHome/flying-redux-template-for-vscode/master/flying-redux-template.jpg)
 
 ## Template for Android Studio
 
