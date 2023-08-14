@@ -2,6 +2,7 @@
   "name": "flying-redux-template",
   "displayName": "flying-redux-template",
   "description": "Generate flying-redux Template",
+  "publisher": "flying-redux",
   "version": "0.0.1",
   "engines": {
     "vscode": "^1.79.0"
